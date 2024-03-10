@@ -1,22 +1,26 @@
+@import "@/app/styles/variables.scss";
+
 button {
-    background-color: #8E64FF;
+    background-color: $linkBlue;
     border-radius: 2px;
-    border-color: #8E64FF;
+    border-color: $linkBlue;
     border-style: solid;
     padding: 5px 15px 5px 15px;
     margin-bottom: 10px;
-    box-shadow: 3px 3px 3px 1px rgba(19, 18, 18, 0.5);
-
+    box-shadow: $shadowThin;
+    color: $offwhite;
+    cursor: pointer;
 }
 
 
-button:active{
+button:active {
     box-shadow: none;
     transform: translateY(1px) translateX(1px);
 }
 
 
-button:hover{
-    background-color: #BBA8FF;
-    border-color: #BBA8FF;
-}
+
+// button:hover{
+//     background-color:$petrol;
+//     border-color:$petrolDark;
+// }

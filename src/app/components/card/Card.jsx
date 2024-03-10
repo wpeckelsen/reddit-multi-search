@@ -1,15 +1,14 @@
-import React from 'react'
+import React from 'react';
+import "./card.scss";
 
-export default function Card({ title, subtitle, content }) {
+export default function Card({ size, title, subtitle, content }) {
     return (
         <>
-            <div className='title'>
-                <h1>{title}</h1>
+            <div className={size}>
+                <h2>{title}</h2>
                 <p>{subtitle}</p>
-            </div>
-
-            <div className='card'>
-                {content}
+                <div className="error"></div>
+                <div className="content">{content}</div>
             </div>
         </>
     )
