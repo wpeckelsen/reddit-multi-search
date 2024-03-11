@@ -1,8 +1,10 @@
-import { Inter } from "next/font/google";
+
 import './styles/globals.scss';
 import Navbar from "./components/navbar/Navbar";
+import Background from './styles/background';
 
-const inter = Inter({ subsets: ["latin"] });
+
+
 
 export const metadata = {
   title: "Reddit Multi Search",
@@ -13,20 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-
-      <body className={inter.className}>
-
-        <div className="background">
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        
-        </div>
+      <body>
 
         <Navbar />
-
         <span className="flex-content">
           {children}
         </span>

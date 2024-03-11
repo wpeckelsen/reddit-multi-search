@@ -14,9 +14,9 @@ export default function page() {
         content={
           <>
             <div>
-            <Link href="pages/search">search</Link>
+            <Link href="search">search</Link>
               <Button
-                content="click me"
+                content={<Link href="/">Search</Link>}
                 type="button"
               />
             </div>
