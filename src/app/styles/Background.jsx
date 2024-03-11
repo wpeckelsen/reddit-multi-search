@@ -1,7 +1,18 @@
 import React from 'react'
+import "./background.scss";
 
 export default function Background() {
-  return (
-    <div>background</div>
-  )
+    return (
+        <>
+            
+                <div className="background">
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                </div>
+            
+        </>
+    )
 }

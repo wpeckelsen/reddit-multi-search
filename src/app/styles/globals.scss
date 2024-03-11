@@ -4,13 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital@0;1&family=Rubik:wght@700&display=swap');
 
 
-body, p, label, button, input, textarea, select {
+body,
+p,
+label,
+button,
+input,
+textarea,
+select {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 200;
 }
 
 
-h1, h2, h3, h4  {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 200;
     font-size: 7em;
@@ -42,46 +51,9 @@ body {
 
 
 
-h3{
+h3 {
     font-size: 2.5em;
 }
-
-
-// dots on the background
-.background {
-    position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-    z-index: -1;
-}
-.dot {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background-color:$googleBlue;
-    border-radius: 50%;
-    top: -10%;
-    left: -10%;
-  }
-  .dot:nth-child(1) {
-    top: 20%;
-    left: 30%;
-    background-color: $redditOrange;
-  }
-
-  .dot:nth-child(3) {
-    top: -40%;
-    left: 90%;
-    // background-color:$petrol;
-  }
-  .dot:nth-child(4) {
-    top: 50%;
-    left: 10%;
-    background-color:$googleYellow;
-  }
-
 
 .flex-content {
     // padding: 0;
