@@ -10,7 +10,7 @@ export default function Background() {
                     <div className="dot"></div>
                     <div className="dot"></div>
                     <div className="dot"></div>
-                    <div className="dot"></div>
+                    {/* <div className="dot"></div> */}
                 </div>
             
         </>

@@ -1,6 +1,9 @@
 @import "@/app/styles/variables.scss";
 
 
+
+
+
 .background {
     position: fixed;
     top: 0;
@@ -17,23 +20,26 @@
     background-color: $googleBlue;
     border-radius: 50%;
     top: -10%;
-    left: -10%;
+    left: 70%;
+    
 }
 
 .dot:nth-child(1) {
-    top: 20%;
+    top: 60%;
     left: 30%;
-    background-color: $redditOrange;
+    background-color: $googleYellow;
+
 }
 
 .dot:nth-child(3) {
     top: -40%;
-    left: 90%;
-    // background-color:$petrol;
+    left: -30%;
+    background-color:$googleYellow;
 }
 
 .dot:nth-child(4) {
-    top: 50%;
-    left: 10%;
-    background-color: $googleYellow;
+    top:30%;
+    left: -10%;
+    background-color: $redditOrange;
+    // z-index: 1;
 }
