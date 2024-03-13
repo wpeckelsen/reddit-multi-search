@@ -6,7 +6,7 @@
     background-color: $offwhite;
     box-shadow: $shadowRegular;
     border-radius: 5px;
-    margin: 10px 0; 
+    margin: 50px auto; 
     padding: 20px; 
     min-height: 80vh;
     min-width: calc(100% - 60px);
@@ -23,18 +23,33 @@
 }
 
 
-// narrow on mobile
+// mobile
 @media only screen and (max-width: 600px) {
     .narrow {
+        margin: 2px;
+        padding: 5px; 
         width: 90%; 
-        padding: 10px; /* Adjusted padding for narrower screens */
+    }
+
+    .wide{
+        margin: 5px;
+        padding: 5px; 
+        width: 100%; 
     }
 }
 
-// narrow on tablet
+//  tablet
 @media only screen and (max-width: 768px) {
     .narrow {
-        width: 80%; 
-        padding: 15px; 
+
+        margin: 2px;
+        width: 90%; 
+        padding: 5px; 
+    }
+
+    .wide{
+        margin: 5px;
+        width: 90%;
+        padding: 5px;
     }
 }

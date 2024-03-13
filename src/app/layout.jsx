@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <Background />
         <Navbar />
 
+
         <span className="flex-content">
           {children}
         </span>
