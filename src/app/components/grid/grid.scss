@@ -1,0 +1,46 @@
+@import "@/app/styles/variables.scss";
+@import "@/app/styles/globals.scss";
+
+.grid {
+    display: grid;
+    column-gap: 15px;
+    row-gap: 15px;
+
+
+    grid-template-areas:
+    "a a c"
+    "b b c"
+    "d d c"
+    ;
+
+    // padding: 10px 0 10px 0;
+    // border-bottom-style: dotted;
+    // border-width: 5px;
+}
+
+
+.grid-a {
+    border: 1px solid red; 
+    grid-area: a;
+    @include flex-centre-left;
+}
+
+
+
+.grid-b {
+    border: 1px solid blue; 
+    grid-area: b;
+    @include flex-centre-left;
+}
+.grid-c {
+    border: 1px solid orange; 
+    grid-area: c;
+    
+    @include flex-button-narrow;
+}
+
+.grid-d {
+    border: 1px solid purple; 
+    grid-area: d;
+    @include flex-centre-left;
+}

@@ -1,16 +1,38 @@
-
 // app colors
 $linkBlue: #0d37f0;
 $redditOrange: #FF5500;
-$petrol:#25A18E;
+$petrol: #25A18E;
 $offwhite: #f4f4fa;
 
 // google colors
 $googleBlue: #4285F4;
-$googleRed:#EA4335;
+$googleRed: #EA4335;
 $googleGreen: #34A853;
 $googleYellow: #FBBC04;
 
-
+// shadows
 $shadowRegular: 3px 3px 3px 1px rgba(19, 18, 18, 0.5);
 $shadowThin: 1px 1px 3px 1px rgba(19, 18, 18, 0.5);
+
+@mixin flex-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-centre-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+@mixin flex-button-narrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+}

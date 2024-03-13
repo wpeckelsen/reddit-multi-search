@@ -9,7 +9,7 @@ export default function Home() {
       <h1>Google through multiple Subreddits</h1>
 
       <Button
-        content={<Link href="/pages/search">Search</Link>}
+        content={<Link href="/pages/profile">Search</Link>}
       />
     </>
   );
