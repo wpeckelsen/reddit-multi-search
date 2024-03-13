@@ -2,7 +2,7 @@ import React from 'react'
 import "./button.scss";
 import Link from 'next/link';
 
-export default function Button({ content, icon, type, click }) {
+export default function Button({ content, type, click }) {
 
   
   return (
