@@ -22,6 +22,7 @@
 .grid-a {
     border: 1px solid red; 
     grid-area: a;
+
     @include flex-centre-left;
 }
 

@@ -20,6 +20,16 @@ h1 {
     font-weight: 200;
     font-size: 100px;
     text-align: center;
+    // position: relative;
+    // z-index: 1;
+    // margin: 10px;
+    backdrop-filter: blur(100px);
+    box-shadow: $shadowRegular;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    
 }
 
 h2{
@@ -27,6 +37,8 @@ h2{
     font-weight: 200;
     font-size: 60px;
     text-align: center;
+
+    
 }
 
 
@@ -37,6 +49,16 @@ h3{
     text-align: left;
     margin-top: 50px;
     margin-bottom: 2px;
+}
+
+
+h4{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: left;
+  // margin-top: 50px;
+  // margin-bottom: 2px;
 }
 
 a {

@@ -25,6 +25,12 @@ export default function Navbar() {
         </p>
         </Link>
 
+        <Link href="/pages/profile"> 
+        <p>
+          <b>Profile</b>
+        </p>
+        </Link>
+
       </div>
     </nav>
   )

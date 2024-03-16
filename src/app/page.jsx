@@ -6,10 +6,10 @@ import Button from "./components/button/Button";
 export default function Home() {
   return (
     <>
-      <h1>Google through multiple Subreddits</h1>
-
+      <h1>Google through multiple Subreddits!</h1>
+    
       <Button
-        content={<Link href="/pages/profile">Search</Link>}
+        content={<Link href="/pages/search">Search</Link>}
       />
     </>
   );

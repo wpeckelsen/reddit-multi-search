@@ -4,6 +4,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from '../button/Button';
 import Grid from '../grid/Grid';
+import "./searchbar.scss";
 
 export default function Searchbar() {
 
@@ -23,12 +24,14 @@ export default function Searchbar() {
 
       <Grid
         a={<>
-          <input
+        
+          <input className='searchInput'
             type="text"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
           />
+          
         </>}
 
         b={<> <p>some reddit picker</p> </>}

@@ -1,0 +1,13 @@
+@import "@/app/styles/variables.scss";
+@import "@/app/styles/globals.scss";
+
+.searchInput{
+ background-color: white;   
+ border-radius: 2.5px;
+ border-style: none;
+box-shadow: $shadowThin;
+
+width: 70%;
+height: 40px; 
+
+}

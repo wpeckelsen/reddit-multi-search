@@ -10,6 +10,12 @@ $googleRed: #EA4335;
 $googleGreen: #34A853;
 $googleYellow: #FBBC04;
 
+// gradients
+@mixin gradientPurple {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(211,185,255,1) 100%);
+}
+
 // shadows
 $shadowRegular: 3px 3px 3px 1px rgba(19, 18, 18, 0.5);
 $shadowThin: 1px 1px 3px 1px rgba(19, 18, 18, 0.5);
@@ -26,10 +32,10 @@ $shadowThin: 1px 1px 3px 1px rgba(19, 18, 18, 0.5);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+
 }
 
-@mixin flex-button-narrow{
+@mixin flex-button-narrow {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

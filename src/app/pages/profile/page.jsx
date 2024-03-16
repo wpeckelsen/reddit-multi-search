@@ -23,7 +23,7 @@ export default function page() {
 
                 <h3>Saved Reddits</h3>
                 <Grid
-                    a="Dog"
+                    a={<><h4>Dog</h4></>}
                     b="r/dogs, r/animals, r/puppies"
                     c={<>
                     <Button
