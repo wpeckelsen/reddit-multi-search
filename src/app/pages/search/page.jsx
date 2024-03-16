@@ -17,10 +17,19 @@ export default function page() {
            <Searchbar
            />
 
+           <Button
+           content={<><Link href="results">Results</Link></>}
+           />
+
           </>
         }
 
       />
+
+
+      
+
+
     </>
 
   )

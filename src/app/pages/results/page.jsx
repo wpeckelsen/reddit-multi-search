@@ -11,9 +11,9 @@ export default function page() {
                 content={<>
 
                     <SearchSnippet
-                        title="reddit.com/cats"
-                        url="https://reddit.com/cats/awwww"
-                        snippet="so cool cat look here"
+                        formattedUrl="reddit.com/cats"
+                        title="https://reddit.com/cats/awwww"
+                        snippet="so cool cat look here aww"
                     />
 
                 </>}
