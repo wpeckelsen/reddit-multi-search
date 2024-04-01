@@ -1,54 +1,45 @@
-"use client"
+
 
 import React from 'react'
-import { useState } from 'react';
 import Button from '../button/Button';
 import Grid from '../grid/Grid';
 import "./searchbar.scss";
 
-export default function Searchbar() {
-
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    // onSearch(e.target.value);
-  }
-
-
+export default function Searchbar({ inputValue, onSearch, onDropDown, click }) {
 
   return (
-
-
-    <div>
-
-      <Grid
+<div>
+<Grid
+        // User inputs custom search query here
         a={<>
-        
           <input className='searchInput'
             type="text"
             placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearch}
+            value={inputValue}
+            onChange={onSearch}
           />
-          
         </>}
 
-        b={<> <p>some reddit picker</p> </>}
+        // User picks a subreddit here
+        b={<>
+          <select id="subredditSelect" onChange={onDropDown}>
+            <option value="">Select a subreddit</option>
+            <option value="site:reddit.com/r/dog ">Dog</option>
+            <option value="site:reddit.com/r/cats ">Cats</option>
+            <option value="site:reddit.com/r/horses ">horses</option>
+          </select>
+        </>}
 
         c={
           <>
             <Button
+              click={click}
+              type="button"
               content={<> <p className='icon'>⌕</p> </>}
-              
             />
           </>
         }
       />
-
-
-
-
     </div>
   )
 }

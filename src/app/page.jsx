@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <>
       <h1>Google through multiple Subreddits!</h1>
-    
-      <Button
-        content={<Link href="/pages/search">Search</Link>}
-      />
+
+      <Link href="/pages/search">{
+        <Button
+          content="Search"
+        />}
+      </Link>
     </>
   );
 }

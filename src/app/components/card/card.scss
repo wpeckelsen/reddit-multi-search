@@ -1,26 +1,24 @@
-
 @import "@/app/styles/variables.scss";
 
 
 .wide {
     background-color: $offwhite;
-    backdrop-filter: blur(5px);
     box-shadow: $shadowRegular;
     border-radius: 5px;
-    margin: 50px auto; 
-    padding: 20px; 
+    margin: 50px auto;
+    padding: 20px;
     min-height: 80vh;
-    min-width: calc(100% - 60px);
+    min-width: 200px;
+    max-width: 1000px;
 
-    
 }
 
-.narrow{
+.narrow {
     background-color: $offwhite;
     box-shadow: $shadowRegular;
     width: calc(60% - 40px);
-    margin: 50px auto; 
-    padding: 20px; 
+    margin: 50px auto;
+    padding: 20px;
     border-radius: 5px;
     min-height: 80vh;
 }
@@ -30,14 +28,14 @@
 @media only screen and (max-width: 600px) {
     .narrow {
         margin: 2px;
-        padding: 5px; 
-        width: 90%; 
+        padding: 5px;
+        width: 90%;
     }
 
-    .wide{
+    .wide {
         margin: 5px;
-        padding: 5px; 
-        width: 100%; 
+        padding: 5px;
+        width: 100%;
     }
 }
 
@@ -46,11 +44,11 @@
     .narrow {
 
         margin: 2px;
-        width: 90%; 
-        padding: 5px; 
+        width: 90%;
+        padding: 5px;
     }
 
-    .wide{
+    .wide {
         margin: 5px;
         width: 90%;
         padding: 5px;
