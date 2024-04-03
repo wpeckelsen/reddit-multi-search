@@ -13,10 +13,11 @@ export default function Google() {
     const [searchResults, setSearchResults] = React.useState([]);
     const [searchTerm, setSearchTerm] = React.useState('');
     const [selectedSubreddit, setSelectedSubreddit] = React.useState('');
-    const [click, setClick] = React.useState(0);
+
 
     const [totalResults, setTotalResults] = React.useState(0);
-    const [index, setIndex] = React.useState(0);
+    const [index, setIndex] = React.useState(1);
+    const [clickCount, setClickCount] = React.useState(0);
 
 
 
@@ -50,30 +51,16 @@ export default function Google() {
 
 
     async function handleClick() {
-        setSearchResults([]); // Reset searchResults to empty array
+        setSearchResults([]);
         setIndex(1);
-        setClick(1);
+        await fetchResults();
     }
 
-    useEffect(() => {
 
-        // clicking search twice stops it from searching?? houtje touwtje, fix
-        if (click === 1) {
-            async function fetch() {
-                await fetchResults();
-                setClick(0);
-            }
-            fetch();
-
-        }
-
-        
-
-
-    }, [click]);
 
     async function loadMoreResults() {
         setIndex(index + 10);
+        setClickCount(+1);
     }
 
     useEffect(() => {
@@ -84,7 +71,7 @@ export default function Google() {
             fetch();
 
         }
-        // clicking search twice stops it from searching??
+
 
 
     }, [index]);
@@ -94,7 +81,6 @@ export default function Google() {
 
     return (
         <div>
-
             <Searchbar
                 inputValue={searchTerm}
                 onSearch={handleInputChange}
@@ -102,7 +88,7 @@ export default function Google() {
                 click={handleClick}
             />
 
-            {searchResults.length > 0 ? (
+            {searchResults.length > 0 && (
                 <div>
                     <ol>
                         {searchResults.map((item, index) => (
@@ -115,17 +101,27 @@ export default function Google() {
                             </li>
                         ))}
                     </ol>
+                    
                     {searchResults.length > 0 && totalResults > searchResults.length && (
-                        <Button
-                            content="Load More"
-                            click={loadMoreResults}
-                            type="form"
-                        />
+                        clickCount > 4 ? (
+                            <>
+                                <Button
+                                    content="Continue on Google"
+                                    click={handleClick}
+                                    type="button"
+                                />
+                            </>
+                        ) : (
+                            <>
+                                <Button
+                                    content="Load More"
+                                    click={loadMoreResults}
+                                    type="form"
+                                />
+                            </>)
                     )}
-                </div>
-            ) : (
-                <p className='no-result'>No search results found</p>
-            )}
+                </div>)
+            }
         </div>
     )
 }
