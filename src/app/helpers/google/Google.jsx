@@ -12,6 +12,9 @@ export default function Google() {
 
     const [searchResults, setSearchResults] = React.useState([]);
     const [searchTerm, setSearchTerm] = React.useState('');
+
+
+    const [selectedCities, setSelectedCities] = React.useState<any[]>([]);
     const [selectedSubreddit, setSelectedSubreddit] = React.useState('');
 
 
@@ -82,10 +85,15 @@ export default function Google() {
     return (
         <div>
             <Searchbar
-                inputValue={searchTerm}
-                onSearch={handleInputChange}
-                onDropDown={handleDropdownChange}
+                inputValue={searchTerm}                
+                inputChange={handleInputChange}
+
+                selectValue={}
+
+                
                 click={handleClick}
+
+                // { inputValue, inputChange, selectValue, selectOptions, selectChange, click }
             />
 
             {searchResults.length > 0 && (
