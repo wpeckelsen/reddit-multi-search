@@ -2,9 +2,7 @@
 import './styles/globals.scss';
 import Navbar from "./components/navbar/Navbar";
 import Background from './styles/background';
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-        
-
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';        
 
 
 
@@ -20,7 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         <Background />
         <Navbar />
-        <PrimeReactProvider value={{ unstyled: true }}>
+        <PrimeReactProvider>
         <span className="flex-content">
           {children}
         </span>
