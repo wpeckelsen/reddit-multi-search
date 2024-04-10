@@ -2,29 +2,32 @@
 
 
 .wide {
-    // background-color: $offwhite;
-    
+
+
     box-shadow: $shadowRegular;
     border-radius: 5px;
     margin: 50px auto;
     padding: 20px;
     min-height: 80vh;
-    width: 800px;
-    
+    width: 1400px;
 
-background: rgba(255, 255, 255, 0.77);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter: blur(20px);
+
+    background: rgba(255, 255, 255, 0.77);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
-.narrow {
-    // background-color: $offwhite;
+.narrow {    
     box-shadow: $shadowRegular;
-    width: calc(60% - 40px);
+    width: 800px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 5px;
     min-height: 80vh;
+
+    background: rgba(255, 255, 255, 0.77);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 

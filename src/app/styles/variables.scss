@@ -22,7 +22,7 @@ $shadowRegular:  0px 0px 10px 10px rgba(19, 18, 18, 0.5);
 $shadowThin: 1px 1px 3px 1px rgba(19, 18, 18, 0.5);
 
 // border style
-$border: 5px solid currentColor;
+$border: 5px solid;
 
 @mixin flex-middle {
     display: flex;

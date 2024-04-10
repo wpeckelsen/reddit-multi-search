@@ -7,12 +7,12 @@ import Google from '@/app/helpers/google/Google'
 import Link from 'next/link'
 import React from 'react'
 
-export default function page() {
+export default function SearchPage() {
   return (
     <>
       <Card
-        size="wide"
-        title="Search multiple Reddits"
+        size="wide"        
+        // title="Combine your searchterm with a list of Subreddits"
         content={
           <>
             <Google/>
