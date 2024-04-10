@@ -1,10 +1,10 @@
 'use client'
-
-
 import SearchSnippet from '@/app/components/SearchSnippet/SearchSnippet';
 import Button from '@/app/components/button/Button';
 import Searchbar from '@/app/components/searchbar/Searchbar';
 import React from 'react'
+
+
 import { useState, useEffect } from 'react';
 
 export default function Google() {
@@ -12,19 +12,31 @@ export default function Google() {
 
     const [searchResults, setSearchResults] = React.useState([]);
     const [searchTerm, setSearchTerm] = React.useState('');
-
-
-    const [selectedCities, setSelectedCities] = React.useState<any[]>([]);
     const [selectedSubreddit, setSelectedSubreddit] = React.useState('');
-
-
     const [totalResults, setTotalResults] = React.useState(0);
     const [index, setIndex] = React.useState(1);
     const [clickCount, setClickCount] = React.useState(0);
+    const [pickedReddits, setPickedReddits] =  React.useState([]);
+
+    const mockList = [
+        { name: 'New York', code: 'NY' },
+        { name: 'Rome', code: 'RM' },
+        { name: 'London', code: 'LDN' },
+        { name: 'Istanbul', code: 'IST' },
+        { name: 'Paris', code: 'PRS' },
+        { name: 'Tokyo', code: 'TKY' },
+        { name: 'Berlin', code: 'BER' },
+        { name: 'Sydney', code: 'SYD' },
+        { name: 'Moscow', code: 'MOW' },
+        { name: 'Madrid', code: 'MAD' },
+        { name: 'Beijing', code: 'BJ' },
+        { name: 'Singapore', code: 'SG' },
+        { name: 'Dubai', code: 'DXB' },
+      ];
 
 
 
-    const combinedSearchTerm = `${searchTerm} ${selectedSubreddit}`;
+    const combinedSearchTerm = `${searchTerm} ${pickedReddits}`;
 
 
 
@@ -46,9 +58,7 @@ export default function Google() {
         setSearchTerm(e.target.value);
     };
 
-    const handleDropdownChange = (event) => {
-        setSelectedSubreddit(event.target.value);
-    };
+    
 
 
 
@@ -80,20 +90,24 @@ export default function Google() {
     }, [index]);
 
 
+    const handleSelectChange = (e) => {
+        setPickedReddits(e.value);
+      };
+
+
 
 
     return (
         <div>
             <Searchbar
-                inputValue={searchTerm}                
+                inputValue={searchTerm}
                 inputChange={handleInputChange}
-
-                selectValue={}
-
-                
+                selectValue={pickedReddits}
+                selectOptions={mockList}
+                selectChange={handleSelectChange}
                 click={handleClick}
 
-                // { inputValue, inputChange, selectValue, selectOptions, selectChange, click }
+            // { inputValue, inputChange, selectValue, selectOptions, selectChange, click }
             />
 
             {searchResults.length > 0 && (
@@ -109,7 +123,7 @@ export default function Google() {
                             </li>
                         ))}
                     </ol>
-                    
+
                     {searchResults.length > 0 && totalResults > searchResults.length && (
                         clickCount > 4 ? (
                             <>

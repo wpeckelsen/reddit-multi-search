@@ -32,6 +32,9 @@
     border: 1px solid blue; 
     grid-area: b;
     @include flex-centre-left;
+
+    display: inline-block; /* Ensure the container behaves like an inline block */
+    width: 100%;
 }
 .grid-c {
     border: 1px solid orange; 
