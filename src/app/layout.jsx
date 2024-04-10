@@ -6,6 +6,7 @@ import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
 
 
+
 export const metadata = {
   title: "Reddit Multi Search",
   description: "Search multiple Subreddits at once!",

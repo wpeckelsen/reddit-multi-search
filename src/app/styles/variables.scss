@@ -3,6 +3,7 @@ $linkBlue: #0d37f0;
 $redditOrange: #FF5500;
 $petrol: #25A18E;
 $offwhite: #f4f4fa;
+$softBlue: #A1B3FF;
 
 // google colors
 $googleBlue: #4285F4;
@@ -17,8 +18,11 @@ $googleYellow: #FBBC04;
 }
 
 // shadows
-$shadowRegular: 3px 3px 3px 1px rgba(19, 18, 18, 0.5);
+$shadowRegular:  0px 0px 10px 10px rgba(19, 18, 18, 0.5);
 $shadowThin: 1px 1px 3px 1px rgba(19, 18, 18, 0.5);
+
+// border style
+$border: 5px solid currentColor;
 
 @mixin flex-middle {
     display: flex;

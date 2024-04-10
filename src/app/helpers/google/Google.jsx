@@ -58,9 +58,7 @@ export default function Google() {
         setSearchTerm(e.target.value);
     };
 
-    const handleDropdownChange = (event) => {
-        setSelectedSubreddit(event.target.value);
-    };
+    
 
 
 

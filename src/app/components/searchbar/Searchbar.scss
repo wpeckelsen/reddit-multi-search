@@ -1,4 +1,8 @@
 @import "@/app/styles/variables.scss";
+@import "@/app/styles/globals.scss";
+
+
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 
 
@@ -13,7 +17,63 @@ height: 40px;
 
 }
 
-.multi-select{
-background-color: orange;
 
+
+// multiselect
+.p-multiselect {
+    background-color: $offwhite;
+    
+    border: $border;
+    border-color: $offwhite;    
+    cursor: pointer;
+}
+
+.p-multiselect-label{
+    display: flex;
+    flex-wrap: wrap;     
+}
+
+.p-multiselect-token{
+background-color: $linkBlue;
+color: white;
+margin-top: 7px;
+}
+
+.p-multiselect-trigger{
+    color: $linkBlue;
+}
+.p-multiselect-item{
+    color: black;
+}
+
+.p-inputtext {
+    color: black;
+}
+
+.p-multiselect-filter{
+    color: black;
+}
+
+
+.p-placeholder{
+    color: black;
+}
+.p-inputtext {
+    color: black;
+}
+
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled).p-focus{
+    background-color: $linkBlue;
+    color: white;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight.p-focus{
+    background-color: $linkBlue;
+    color: white;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight{
+    background-color: $offwhite;
+    color: black;
 }
