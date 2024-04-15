@@ -1,6 +1,6 @@
 @import "@/app/styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital@0;1&family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 
 
 body,
@@ -10,7 +10,7 @@ button,
 input,
 textarea,
 select {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: 22px;
   word-wrap: break-word;
@@ -19,9 +19,11 @@ select {
 
 
 h1 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 200;
+  
   font-size: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 
   

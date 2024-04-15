@@ -2,32 +2,32 @@
 
 
 .wide {
-
-
-    box-shadow: $shadowRegular;
     border-radius: 5px;
     margin: 50px auto;
     padding: 20px;
     min-height: 80vh;
     width: 1400px;
+    background-color: $offwhite;
 
-
-    background: rgba(255, 255, 255, 0.77);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    // box-shadow: $shadowRegular;
+    // background: rgba(255, 255, 255, 0.77);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
 }
 
-.narrow {    
-    box-shadow: $shadowRegular;
+.narrow {
+
     width: 800px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 5px;
     min-height: 80vh;
+    background-color: $offwhite;
 
-    background: rgba(255, 255, 255, 0.77);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    // box-shadow: $shadowRegular;
+    // background: rgba(255, 255, 255, 0.77);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
 }
 
 

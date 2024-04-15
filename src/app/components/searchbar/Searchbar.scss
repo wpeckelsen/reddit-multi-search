@@ -6,14 +6,12 @@
 
 
 
-.searchInput{
- background-color: white;   
- border-radius: 2.5px;
- border-style: none;
-box-shadow: $shadowThin;
+.searchInput {
+    border: 1px solid $linkBlue;
 
-width: 70%;
-height: 40px; 
+    width: 100%;
+
+    height: 50px;
 
 }
 
@@ -22,27 +20,28 @@ height: 40px;
 // multiselect
 .p-multiselect {
     background-color: $offwhite;
-    
+
     border: $border;
-    border-color: $offwhite;    
+    border-color: $offwhite;
     cursor: pointer;
 }
 
-.p-multiselect-label{
+.p-multiselect-label {
     display: flex;
-    flex-wrap: wrap;     
+    flex-wrap: wrap;
 }
 
-.p-multiselect-token{
-background-color: $linkBlue;
-color: white;
-margin-top: 7px;
+.p-multiselect-token {
+    background-color: $linkBlue;
+    color: white;
+    margin-top: 7px;
 }
 
-.p-multiselect-trigger{
+.p-multiselect-trigger {
     color: $linkBlue;
 }
-.p-multiselect-item{
+
+.p-multiselect-item {
     color: black;
 }
 
@@ -50,30 +49,31 @@ margin-top: 7px;
     color: black;
 }
 
-.p-multiselect-filter{
+.p-multiselect-filter {
     color: black;
 }
 
 
-.p-placeholder{
+.p-placeholder {
     color: black;
 }
+
 .p-inputtext {
     color: black;
 }
 
 
-.p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled).p-focus{
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled).p-focus {
     background-color: $linkBlue;
     color: white;
 }
 
-.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight.p-focus{
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight.p-focus {
     background-color: $linkBlue;
     color: white;
 }
 
-.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight{
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
     background-color: $offwhite;
     color: black;
 }

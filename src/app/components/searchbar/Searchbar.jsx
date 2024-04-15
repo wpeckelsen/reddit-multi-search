@@ -16,7 +16,7 @@ export default function Searchbar({ inputValue, inputChange, selectValue, select
         a={<>
           <input className='searchInput'
             type="text"
-            placeholder="Search..."
+            placeholder=""
             value={inputValue}
             onChange={inputChange}
           />
