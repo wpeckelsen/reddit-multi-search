@@ -76,8 +76,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-
-
   text-decoration-thickness: 3px;
 }
 
@@ -89,6 +87,39 @@ b {
 body {
   background-color: white;
   margin: 0;
+  
+}
+
+
+
+a {
+  text-decoration: none;
+  color: $linkBlue;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.switch-title{  
+  color: $linkBlue;
+}
+
+.switch-title-active{
+  color: $linkBlue;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+.switch-title-active:hover{
+  text-decoration-thickness: 5px;
+}
+
+.switch-title:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  cursor: pointer;
   
 }
 
