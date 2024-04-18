@@ -14,7 +14,7 @@ export default function Home() {
       
       <Link href="/pages/search">{
         <Button
-          content="Search"          
+          content={<> <p>start!</p> </>}          
         />}
       </Link>
    
