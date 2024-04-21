@@ -3,15 +3,30 @@ import Card from '../../components/card/Card'
 import Grid from '../../components/grid/Grid'
 import React from 'react'
 import ProfileForm from '../../components/profileForm/ProfileForm'
-import { createClient } from '../../utils/supabase/server'
+import { createClient } from '../../supabase/server'
 
 
 export default async function page() {
     const supabase = createClient();
+    let user;
 
+    // Ensure that supabase.auth is defined before calling getUser()
+    // if (supabase.auth) {
+    //     const {
+    //         data: { user },
+    //     } = await supabase.auth.getUser();
+    // }
+
+
+// Ensure that supabase.auth is defined before calling getUser()
+if (supabase.auth) {
     const {
-        data: { user },
-    } = await supabase.auth.getUser()
+        data: { user: userData },
+    } = await supabase.auth.getUser();
+    user = userData;
+}
+
+
 
     return (
         <Card

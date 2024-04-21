@@ -31,14 +31,13 @@ export default function page() {
               <input id="password" name="password" type="password" required />
 
               <Button
-                type="form"
+                type="submit"
                 form={login}
-                content="Log in"
-
+                content="Log in"                 
               />
               
               <Button
-                type="form"
+                type="submit"
                 form={signup}
                 content="Sign up"
               />

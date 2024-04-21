@@ -1,22 +1,33 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react';
-import { createClient } from '../../utils/supabase/server';
+
 
 // '@/utils/supabase/server'
 
 export default function ProfileForm({ user }) {
-  const supabase = createClient()
+  // const supabase = createClient()
   const [loading, setLoading] = useState(true)
   const [fullname, setFullname] = useState(null)
   const [username, setUsername] = useState(null)
   const [website, setWebsite] = useState(null)
   const [avatar_url, setAvatarUrl] = useState(null)
 
+
+  const [client, setClient] = useState(null);
+
+
+  useEffect(() => {
+    fetch('/api/createClient')
+      .then(response => response.json())
+      .then(data => setClient(data.client));
+  }, []);
+
+
   const getProfile = useCallback(async () => {
     try {
       setLoading(true)
 
-      const { data, error, status } = await supabase
+      const { data, error, status } = await client
         .from('profiles')
         .select(`full_name, username, website, avatar_url`)
         .eq('id', user?.id)
@@ -28,7 +39,7 @@ export default function ProfileForm({ user }) {
 
       if (data) {
         setFullname(data.full_name)
-        setUsername(data.username)
+        setUsername(data.username)        
         setWebsite(data.website)
         setAvatarUrl(data.avatar_url)
       }
@@ -37,7 +48,7 @@ export default function ProfileForm({ user }) {
     } finally {
       setLoading(false)
     }
-  }, [user, supabase])
+  }, [user, client])
 
   useEffect(() => {
     getProfile()
@@ -47,7 +58,7 @@ export default function ProfileForm({ user }) {
     try {
       setLoading(true)
 
-      const { error } = await supabase.from('profiles').upsert({
+      const { error } = await client.from('profiles').upsert({
         id: user?.id,
         full_name: fullname,
         username,
