@@ -1,0 +1,63 @@
+@import "/app/styles/variables.scss";
+
+
+.wide {
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 20px;
+    min-height: 80vh;
+    width: 1400px;
+    background-color: $offwhite;
+
+    // box-shadow: $shadowRegular;
+    // background: rgba(255, 255, 255, 0.77);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
+}
+
+.narrow {
+
+    width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 80vh;
+    background-color: $offwhite;
+
+    // box-shadow: $shadowRegular;
+    // background: rgba(255, 255, 255, 0.77);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
+}
+
+
+// mobile
+@media only screen and (max-width: 600px) {
+    .narrow {
+        margin: 2px;
+        padding: 5px;
+        width: 90%;
+    }
+
+    .wide {
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+//  tablet
+@media only screen and (max-width: 768px) {
+    .narrow {
+
+        margin: 2px;
+        width: 90%;
+        padding: 5px;
+    }
+
+    .wide {
+        margin: 5px;
+        width: 90%;
+        padding: 5px;
+    }
+}
