@@ -9,7 +9,7 @@ import { logout } from '../../auth/actions/actions';
 
 
 export default function Account({ user }) {
-  // const supabase = createClient()
+  
   const supabase = createClient();
   const [loading, setLoading] = useState(true)
 

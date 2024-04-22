@@ -4,11 +4,13 @@ import Grid from '../../components/grid/Grid'
 import React from 'react'
 import Account from '../../components/account/Account'
 import { createClient } from '../../supabase/server'
+import Link from 'next/link'
 
 
 export default async function page() {
     const supabase = createClient();
     let user;
+
 
     if (supabase.auth) {
         const {
@@ -18,32 +20,54 @@ export default async function page() {
     }
 
 
+    const { data, error } = await supabase.auth.getSession()
+
+
 
     return (
         <Card
-            title="Profile"            
+            title="Profile"
             size="wide"
-            content={<>            
-               <Account
-               user={user}
-               />
+            content={<>
+                {data.session ?
 
-                <h3>Saved Reddits</h3>
-                <Grid
-                    a={<><h4>Dog</h4></>}
-                    b="r/dogs, r/animals, r/puppies"
-                    c={<>
-                        <Button
-                            content={<>
-                                <p className='icon'>⌕</p>
+                    <>
+
+                        <Account
+                            user={user}
+               />
+               <h3>Saved Reddits</h3>
+                        <Grid
+                            a={<><h4>Dog</h4></>}
+                            b="r/dogs, r/animals, r/puppies"
+                            c={<>
+                                <Button
+                                    content={<>
+                                        <p className='icon'>⌕</p>
+                                    </>}
+                                />
+
+
                             </>}
+                            d="more stuff"
+
                         />
 
+                    </>
+                     
+               
+               
+        
+               
+               
+               : <p>
+                        You're not logged in. <Link href="/auth/login">Log in</Link> or <Link href="/auth/signup">Sign up</Link> to view your profile.
+                    </p>}
 
-                    </>}
-                    d="more stuff"
 
-                />
+
+
+
 
 
             </>}

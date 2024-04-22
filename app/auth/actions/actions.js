@@ -63,11 +63,10 @@ export async function logout() {
   redirect('/')
 }
 
-export async function fetchPosts() {
-  const supabase = createClient();
-  const { data, error } = await supabase.from('posts').select();
-  if (error) {
-    throw new Error('Error fetching posts');
-  }
-  return data; // Assuming data contains posts
+export async function fetchReddits() {
+  const supabase = createClient()
+  let { data: reddits, error } = await supabase
+  .from('reddits')
+  .select('*')
+  return reddits
 }

@@ -13,14 +13,11 @@
     "d d c"
     ;
 
-    // padding: 10px 0 10px 0;
-    // border-bottom-style: dotted;
-    // border-width: 5px;
 }
 
 
 .grid-a {
-    border: 1px solid red; 
+    
     grid-area: a;
 
     @include flex-centre-left;
@@ -29,22 +26,22 @@
 
 
 .grid-b {
-    border: 1px solid blue; 
+    
     grid-area: b;
     @include flex-centre-left;
 
-    display: inline-block; /* Ensure the container behaves like an inline block */
+    display: inline-block; 
     width: 100%;
 }
 .grid-c {
-    border: 1px solid orange; 
+    
     grid-area: c;
     
     @include flex-button-narrow;
 }
 
 .grid-d {
-    border: 1px solid purple; 
+    
     grid-area: d;
     @include flex-centre-left;
 }

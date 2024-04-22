@@ -5,18 +5,20 @@ import Searchbar from '../../components/searchbar/Searchbar';
 import React from 'react'
 
 
+
 import { useState, useEffect } from 'react';
 
+// to do: pull apart client and server components
 export default function Google() {
 
 
-    const [searchResults, setSearchResults] = React.useState([]);
-    const [searchTerm, setSearchTerm] = React.useState('');
-    const [selectedSubreddit, setSelectedSubreddit] = React.useState('');
-    const [totalResults, setTotalResults] = React.useState(0);
-    const [index, setIndex] = React.useState(1);
-    const [clickCount, setClickCount] = React.useState(0);
-    const [pickedReddits, setPickedReddits] =  React.useState([]);
+    const [searchResults, setSearchResults] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedSubreddit, setSelectedSubreddit] = useState('');
+    const [totalResults, setTotalResults] = useState(0);
+    const [index, setIndex] = useState(1);
+    const [clickCount, setClickCount] = useState(0);
+    const [pickedReddits, setPickedReddits] = useState([]);
 
     const mockList = [
         { name: 'New York', code: 'NY' },
@@ -32,7 +34,7 @@ export default function Google() {
         { name: 'Beijing', code: 'BJ' },
         { name: 'Singapore', code: 'SG' },
         { name: 'Dubai', code: 'DXB' },
-      ];
+    ];
 
 
 
@@ -41,26 +43,20 @@ export default function Google() {
 
 
     async function fetchResults() {
-        const apiKey = 'AIzaSyAxrEVlU_KY8SkfpljpNk3HZ6wTZ1Yf0AA';
-        const cx = '25e484cb53c6f4d68';
-        const url = `https://www.googleapis.com/customsearch/v1?q=${combinedSearchTerm}&key=${apiKey}&cx=${cx}&start=${index}`;
+        const key = process.env.GOOGLE_API_KEY;
+        const cx = process.env.GOOGLE_CX;
+        const url = `https://www.googleapis.com/customsearch/v1?q=${combinedSearchTerm}&key=${key}&cx=${cx}&start=${index}`;
         const response = await fetch(url);
         const data = await response.json();
         setSearchResults(prevResults => [...prevResults, ...(data.items || [])]);
         setTotalResults(data.searchInformation.totalResults);
         console.log("================");
-
         console.log(">> fetchResults index: " + index)
-
     }
 
     const handleInputChange = (e) => {
         setSearchTerm(e.target.value);
     };
-
-    
-
-
 
 
     async function handleClick() {
@@ -92,7 +88,7 @@ export default function Google() {
 
     const handleSelectChange = (e) => {
         setPickedReddits(e.value);
-      };
+    };
 
 
 
@@ -105,9 +101,7 @@ export default function Google() {
                 selectValue={pickedReddits}
                 selectOptions={mockList}
                 selectChange={handleSelectChange}
-                click={handleClick}
-
-            // { inputValue, inputChange, selectValue, selectOptions, selectChange, click }
+                click={handleClick}            
             />
 
             {searchResults.length > 0 && (
