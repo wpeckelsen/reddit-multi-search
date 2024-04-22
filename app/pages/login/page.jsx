@@ -1,12 +1,19 @@
-
+"use client"
 import Card from '../../components/card/Card';
 import Link from 'next/link';
 import React from 'react';
-import { login, signup } from './actions';
+import { login } from '../../auth/actions/actions';
 import Button from '../../components/button/Button';
+import Grid from '../../components/grid/Grid';
 
 export default function page() {
 
+  async function handleForm(e) {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    await login(email, password);
+  }
 
   return (
     <>
@@ -24,22 +31,31 @@ export default function page() {
 
         content={
           <>
-            <form>
-              <label htmlFor="email">Email:</label>
-              <input id="email" name="email" type="email" required />
-              <label htmlFor="password">Password:</label>
-              <input id="password" name="password" type="password" required />
+            <form onSubmit={(e) => handleForm(e)}>
 
-              <Button
-                type="submit"
-                form={login}
-                content="Log in"                 
-              />
-              
-              <Button
-                type="submit"
-                form={signup}
-                content="Sign up"
+              <Grid
+                a={
+                  <>
+
+                    <input id="email" name="email" type="email" required placeholder='email@mail.com' />
+                  </>
+                }
+
+                b={
+                  <>
+
+                    <input id="password" name="password" type="password" required placeholder=" . . ." />
+                  </>
+                }
+                c={
+                  <>
+                    <Button
+                      type="submit"
+                      form={login}
+                      content="Log in"
+                    />
+                  </>
+                }
               />
             </form>
           </>

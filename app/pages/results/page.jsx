@@ -2,7 +2,11 @@ import SearchSnippet from '../../components/SearchSnippet/SearchSnippet'
 import Card from '../../components/card/Card'
 import React from 'react'
 
+
 export default function page() {
+
+    
+
     return (
         <>
             <Card
@@ -15,6 +19,8 @@ export default function page() {
                         title="https://reddit.com/cats/awwww"
                         snippet="so cool cat look here aww"
                     />
+                    
+
 
                 </>}
 

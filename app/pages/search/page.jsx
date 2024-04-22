@@ -1,20 +1,24 @@
 
-import Button from '../../components/button/Button'
+import Link from 'next/link';
 import Card from '../../components/card/Card'
-import Searchbar from '../../components/searchbar/Searchbar'
 import Google from '../../helpers/google/Google'
+import { React } from 'react';
 
-import Link from 'next/link'
-import React from 'react'
 
 export default function SearchPage() {
+  
+  
+
+
+
   return (
     <>
       <Card
-        size="wide"        
-        // title="Combine your searchterm with a list of Subreddits"
+        size="wide"              
         content={
           <>
+          <Link href="subreddits">hello</Link>
+
             <Google/>
           </>
         }
