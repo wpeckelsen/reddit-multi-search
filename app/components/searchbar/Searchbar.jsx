@@ -1,12 +1,10 @@
-
-
-import React from 'react'
+import React from 'react';
 import Button from '../button/Button';
 import Grid from '../grid/Grid';
 import "./searchbar.scss";
 import { MultiSelect } from 'primereact/multiselect';
 
-export default function Searchbar({ inputValue, inputChange, selectValue, selectOptions, selectChange, click }) {
+export default function Searchbar({ inputValue, inputChange, selectValue, selectOptions, selectChange, click, selectFilter }) {
 
 
   return (
@@ -24,11 +22,8 @@ export default function Searchbar({ inputValue, inputChange, selectValue, select
 
         // User picks a subreddit here
         b={<>
-
-
-
           <MultiSelect
-          className='multi-select'
+            className='multi-select'
             value={selectValue}
             options={selectOptions}
             onChange={selectChange}
@@ -37,17 +32,9 @@ export default function Searchbar({ inputValue, inputChange, selectValue, select
             placeholder="Pick Subreddits"
             display="chip"
             filter
+            onFilter={selectFilter}
+
           />
-
-
-
-          {/* 
-          <select id="subredditSelect" onChange={onDropDown}>
-            <option value="">Select a subreddit</option>
-            <option value="site:reddit.com/r/dog ">Dog</option>
-            <option value="site:reddit.com/r/cats ">Cats</option>
-            <option value="site:reddit.com/r/horses ">horses</option>
-          </select> */}
         </>}
 
         c={

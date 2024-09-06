@@ -1,7 +1,7 @@
 
 import './styles/globals.scss';
 import Navbar from "./components/navbar/Navbar";
-import Background from './styles/background';
+import Background from './styles/Background';
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';        
 
 
